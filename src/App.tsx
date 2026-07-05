@@ -98,26 +98,34 @@ export function App() {
                     <h3>{member.name}</h3>
                   </div>
                   <dl>
-                    <div>
-                      <dt>専攻・関心領域</dt>
-                      <dd>{member.focus}</dd>
-                    </div>
+                    {member.focus ? (
+                      <div>
+                        <dt>専攻・関心領域</dt>
+                        <dd>{member.focus}</dd>
+                      </div>
+                    ) : null}
                     <div>
                       <dt>一言プロフィール</dt>
                       <dd>{member.profile}</dd>
                     </div>
-                    <div>
-                      <dt>得意な視点</dt>
-                      <dd>{member.strengths}</dd>
-                    </div>
-                    <div>
-                      <dt>これまでの活動・実績</dt>
-                      <dd>{member.achievements}</dd>
-                    </div>
-                    <div>
-                      <dt>企業に対して提供できる視点</dt>
-                      <dd>{member.companyView}</dd>
-                    </div>
+                    {member.strengths ? (
+                      <div>
+                        <dt>得意な視点</dt>
+                        <dd>{member.strengths}</dd>
+                      </div>
+                    ) : null}
+                    {member.achievements ? (
+                      <div>
+                        <dt>これまでの活動・実績</dt>
+                        <dd>{member.achievements}</dd>
+                      </div>
+                    ) : null}
+                    {member.companyView ? (
+                      <div>
+                        <dt>企業に対して提供できる視点</dt>
+                        <dd>{member.companyView}</dd>
+                      </div>
+                    ) : null}
                   </dl>
                 </article>
               ))}
