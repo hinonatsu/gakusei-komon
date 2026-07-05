@@ -112,7 +112,7 @@ li {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(251, 250, 247, 0.96) 0%, rgba(251, 250, 247, 0.86) 42%, rgba(251, 250, 247, 0.42) 72%, rgba(251, 250, 247, 0.64) 100%),
-    url("/images/hero-student-review.png") center right / cover no-repeat;
+    url("/gakusei-komon/images/hero-student-review.png") center right / cover no-repeat;
   filter: grayscale(1);
 }
 
@@ -570,7 +570,7 @@ tr:last-child td {
   .hero-media {
     background:
       linear-gradient(180deg, rgba(251, 250, 247, 0.98) 0%, rgba(251, 250, 247, 0.9) 58%, rgba(251, 250, 247, 0.74) 100%),
-      url("/images/hero-student-review.png") center / cover no-repeat;
+      url("/gakusei-komon/images/hero-student-review.png") center / cover no-repeat;
   }
 
   .hero-inner {

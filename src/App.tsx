@@ -38,7 +38,7 @@ function CtaButtons() {
         15分だけ相談する
       </a>
       <a className="button button-secondary" href="#value">
-        サービス内容を見る
+        相談できることを見る
       </a>
     </div>
   );
@@ -64,127 +64,27 @@ export function App() {
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-media" aria-hidden="true" />
           <div className="hero-inner">
-            <p className="eyebrow">学生の本音を、事業に使える言葉へ。</p>
+            <p className="eyebrow">学生の感覚を、事業に使える言葉へ。</p>
             <h1 id="hero-title">
-              <span>若者からの“率直な反応”を、</span>
-              <span>企業が使える“改善案”に変える。</span>
+              <span>学生目線の率直な感想を、</span>
+              <span>事業に使える改善案まで。</span>
             </h1>
             <p className="hero-copy">
-              東大・UC Berkeley・ロンドン大学の学生3人が、採用・SNS・新規事業・若者向け施策を学生目線でレビューし、伝わり方のズレを一緒に壁打ちします。
+              東大・UC Berkeley・ロンドン大学の学生3人が、若者としての感覚と事業の目線を行き来しながら、新規事業、採用施策、学生との接点づくり、社長の雑談相手まで90分で壁打ちします。
             </p>
             <CtaButtons />
             <p className="hero-note">
-              採用ページ、Wantedly、SNS、LP、商品企画、イベント企画などに対応。
+              固定メニューではありません。若者にどう見えるかを知りたい、ただ学生と話したい、という相談から始められます。
             </p>
           </div>
         </section>
 
-        <section className="section problem" id="problem">
-          <div className="container two-column">
-            <SectionHeading title="企業の言葉は、学生にそのまま届いていないかもしれません。" />
-            <div className="prose">
-              <p>
-                社長や採用担当者にとっては自然な言葉でも、学生から見ると違って見えることがあります。
-                「裁量権があります」は「放置されそう」に、「成長環境です」は「きつそう」に、「アットホームな職場です」は「内輪感が強そう」に見えることもあります。
-              </p>
-              <p>
-                私たちは、そうした若者から見た第一印象や違和感を率直に伝え、企業側が使える改善案に変換します。
-              </p>
-            </div>
-          </div>
-          <div className="container compact-grid">
-            {painCards.map((item) => (
-              <article className="quiet-panel" key={item}>
-                <span>{item}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section" id="value">
-          <div className="container">
-            <SectionHeading
-              eyebrow="特徴"
-              title="学生の本音と、知的な壁打ちを同時に。"
-            />
-            <div className="value-grid">
-              {values.map((value) => (
-                <article className="line-card" key={value.title}>
-                  <h3>{value.title}</h3>
-                  <p>{value.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-ruled" id="themes">
-          <div className="container">
-            <SectionHeading title="採用だけでなく、若者に届けたいあらゆるテーマに対応します。" />
-            <ul className="theme-list">
-              {themes.map((theme) => (
-                <li key={theme}>{theme}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="section" id="examples">
-          <div className="container">
-            <SectionHeading title="たとえば、こんなズレを見つけます。" />
-            <div className="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>企業側の表現</th>
-                    <th>学生からの見え方</th>
-                    <th>改善の方向性</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {expressionExamples.map((example) => (
-                    <tr key={example.company}>
-                      <td>{example.company}</td>
-                      <td>{example.student}</td>
-                      <td>{example.improvement}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-ink" id="process">
-          <div className="container process-layout">
-            <div>
-              <SectionHeading
-                eyebrow="流れ"
-                title="90分で、伝わり方のズレを見つけます。"
-              />
-              <ul className="deliverables" aria-label="成果物">
-                {deliverables.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <ol className="timeline">
-              {processSteps.map((step) => (
-                <li key={step.time}>
-                  <span>{step.time}</span>
-                  <p>{step.title}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="section" id="members">
+        <section className="section section-ruled member-feature" id="members">
           <div className="container">
             <SectionHeading
               eyebrow="メンバー"
-              title="メンバー"
-              lead="国内外の大学で学ぶ学生3人が、それぞれの視点から率直にレビューします。"
+              title="この3人と話せること自体が、サービスの価値です。"
+              lead="国内外の大学で学ぶ学生3人が、普通の若者としての感覚と、それぞれの関心領域から見た論点を率直に伝えます。採用、新規事業、発信、雑談まで、相手に合わせて言葉を選びながら壁打ちします。"
             />
             <div className="member-grid">
               {members.map((member) => (
@@ -221,6 +121,106 @@ export function App() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="section problem" id="problem">
+          <div className="container two-column">
+            <SectionHeading title="若者に聞けばいい、で終わらせません。" />
+            <div className="prose">
+              <p>
+                学生の本音は大事です。ただ、「面白いです」「ちょっと微妙です」だけでは、事業や採用の次の一手にはつながりにくいことがあります。
+              </p>
+              <p>
+                私たちは、学生目線の率直な感想や感覚をそのまま伝えたうえで、なぜそう感じるのか、企業側はどこを直せるのか、次に何を試すべきかまで一緒に整理します。
+              </p>
+            </div>
+          </div>
+          <div className="container compact-grid">
+            {painCards.map((item) => (
+              <article className="quiet-panel" key={item}>
+                <span>{item}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="value">
+          <div className="container">
+            <SectionHeading
+              eyebrow="特徴"
+              title="感想で終わらない、事業に使える学生顧問。"
+              lead="新規事業の壁打ち、採用応募を増やす施策、学生との接点づくり、あるいは普通の雑談まで。テーマに合わせて、学生の感覚と事業の論点をつなぎます。"
+            />
+            <div className="value-grid">
+              {values.map((value) => (
+                <article className="line-card" key={value.title}>
+                  <h3>{value.title}</h3>
+                  <p>{value.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-ruled" id="themes">
+          <div className="container">
+            <SectionHeading title="決まった相談でなくても大丈夫です。" />
+            <ul className="theme-list">
+              {themes.map((theme) => (
+                <li key={theme}>{theme}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="section" id="examples">
+          <div className="container">
+            <SectionHeading title="たとえば、こんな議論ができます。" />
+            <div className="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>相談テーマ</th>
+                    <th>学生からの反応</th>
+                    <th>90分で整理すること</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {expressionExamples.map((example) => (
+                    <tr key={example.company}>
+                      <td>{example.company}</td>
+                      <td>{example.student}</td>
+                      <td>{example.improvement}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-ink" id="process">
+          <div className="container process-layout">
+            <div>
+              <SectionHeading
+                eyebrow="流れ"
+                title="90分で、感想から次の打ち手まで議論します。"
+              />
+              <ul className="deliverables" aria-label="成果物">
+                {deliverables.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <ol className="timeline">
+              {processSteps.map((step) => (
+                <li key={step.time}>
+                  <span>{step.time}</span>
+                  <p>{step.title}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
@@ -266,9 +266,9 @@ export function App() {
 
         <section className="contact" id="contact">
           <div className="container contact-inner">
-            <SectionHeading title="まずは15分、課題が合うかだけ話しませんか。" />
+            <SectionHeading title="まずは15分、どんな話ができそうかだけ話しませんか。" />
             <p>
-              無理な営業ではなく、まずは貴社の課題に対して学生目線が役立つかを確認できればと思っています。
+              新規事業、採用、学生紹介、雑談。まだ相談内容が固まっていなくても大丈夫です。貴社にとって学生顧問が役立つ場面を一緒に確認できればと思っています。
             </p>
             <div className="cta-row">
               <a className="button button-primary" href={CONTACT_LINKS.googleForm}>
@@ -287,7 +287,7 @@ export function App() {
           <a className="brand" href="#top">
             {SERVICE_NAME}
           </a>
-          <p>学生目線の率直なレビューを、企業が使える改善案へ。</p>
+          <p>学生の率直な感覚を、事業に使える改善案へ。</p>
         </div>
         <div>
           <a href="#contact">問い合わせ</a>
