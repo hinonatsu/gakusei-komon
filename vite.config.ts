@@ -4,4 +4,16 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/gakusei-komon/",
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: "assets/index.js",
+        chunkFileNames: "assets/[name].js",
+        assetFileNames: (assetInfo) =>
+          assetInfo.names.some((name) => name.endsWith(".css"))
+            ? "assets/index.css"
+            : "assets/[name][extname]",
+      },
+    },
+  },
 });

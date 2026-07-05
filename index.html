@@ -11,6 +11,22 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      const isGitHubPages =
+        window.location.hostname.endsWith("github.io") &&
+        window.location.pathname.startsWith("/gakusei-komon");
+
+      if (isGitHubPages) {
+        const stylesheet = document.createElement("link");
+        stylesheet.rel = "stylesheet";
+        stylesheet.href = "/gakusei-komon/assets/index.css";
+        document.head.appendChild(stylesheet);
+
+        const scriptUrl = "/gakusei-komon/assets/index.js";
+        import(/* @vite-ignore */ scriptUrl);
+      } else {
+        import("/src/main.tsx");
+      }
+    </script>
   </body>
 </html>
