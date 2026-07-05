@@ -108,16 +108,34 @@ export function App() {
                       <dt>一言プロフィール</dt>
                       <dd>{member.profile}</dd>
                     </div>
+                    {member.career.length > 0 ? (
+                      <div>
+                        <dt>経歴</dt>
+                        <dd>
+                          <ul className="member-detail-list">
+                            {member.career.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </dd>
+                      </div>
+                    ) : null}
                     {member.strengths ? (
                       <div>
                         <dt>得意な視点</dt>
                         <dd>{member.strengths}</dd>
                       </div>
                     ) : null}
-                    {member.achievements ? (
+                    {member.achievements.length > 0 ? (
                       <div>
-                        <dt>これまでの活動・実績</dt>
-                        <dd>{member.achievements}</dd>
+                        <dt>実績</dt>
+                        <dd>
+                          <ul className="member-detail-list">
+                            {member.achievements.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </dd>
                       </div>
                     ) : null}
                     {member.companyView ? (

@@ -454,6 +454,22 @@ tr:last-child td {
   margin-left: 0;
 }
 
+.member-detail-list {
+  display: grid;
+  gap: 10px;
+}
+
+.member-detail-list li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.member-detail-list li::before {
+  position: absolute;
+  left: 0;
+  content: "・";
+}
+
 .pricing-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 46px;
