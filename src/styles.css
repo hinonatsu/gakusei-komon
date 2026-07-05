@@ -455,7 +455,7 @@ tr:last-child td {
 }
 
 .pricing-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 46px;
 }
 

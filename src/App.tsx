@@ -1,5 +1,6 @@
 import {
   CONTACT_LINKS,
+  SESSION_NAME,
   SERVICE_NAME,
   deliverables,
   expressionExamples,
@@ -70,7 +71,7 @@ export function App() {
               <span>事業に使える改善案まで。</span>
             </h1>
             <p className="hero-copy">
-              東大・UC Berkeley・ロンドン大学の学生3人が、若者としての感覚と事業の目線を行き来しながら、新規事業、採用施策、学生との接点づくり、社長の雑談相手まで90分で壁打ちします。
+              {SESSION_NAME}では、UC Berkeley・ロンドン大学・東京大学の現役学生3人が、学生採用・インターン・若者向けサービスを本音でレビューします。新規事業、採用施策、学生との接点づくり、社長の雑談相手まで90分で壁打ちできます。
             </p>
             <CtaButtons />
             <p className="hero-note">
@@ -84,7 +85,7 @@ export function App() {
             <SectionHeading
               eyebrow="メンバー"
               title="この3人と話せること自体が、サービスの価値です。"
-              lead="国内外の大学で学ぶ学生3人が、普通の若者としての感覚と、それぞれの関心領域から見た論点を率直に伝えます。採用、新規事業、発信、雑談まで、相手に合わせて言葉を選びながら壁打ちします。"
+              lead="海外大生、技術・事業開発に取り組む学生、研究と起業の両方で動く学生。それぞれの経験を持つ3人が、普通の若者としての感覚と、事業に使える論点の両方を伝えます。"
             />
             <div className="member-grid">
               {members.map((member) => (
@@ -228,7 +229,7 @@ export function App() {
           <div className="container">
             <SectionHeading
               eyebrow="料金"
-              title="まずは検証価格でご提供します。"
+              title="学生リアルインサイト相談会"
             />
             <div className="pricing-grid">
               {plans.map((plan) => (
@@ -248,7 +249,7 @@ export function App() {
               ))}
             </div>
             <p className="note">
-              現在はサービス検証段階のため、内容や価格は相談可能です。
+              学生採用、インターン募集、若者向けサービス、新規事業、雑談まで、相談内容に合わせて90分の使い方を調整します。
             </p>
           </div>
         </section>
