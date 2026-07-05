@@ -1,4 +1,4 @@
-export const SERVICE_NAME = "学生目線会議";
+export const SERVICE_NAME = "学生顧問";
 
 export const CONTACT_LINKS = {
   googleForm: "#replace-google-form-url",
