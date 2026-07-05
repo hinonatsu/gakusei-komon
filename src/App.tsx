@@ -13,6 +13,15 @@ import {
   themes,
   values,
 } from "./content";
+import hinoPhoto from "./images/hino.jpg";
+import riaPhoto from "./images/ria.jpg";
+import shotaPhoto from "./images/shota.jpg";
+
+const memberPhotos: Record<string, string> = {
+  平賀梨愛: riaPhoto,
+  小野寺章太: shotaPhoto,
+  樋野夏希: hinoPhoto,
+};
 
 function SectionHeading({
   eyebrow,
@@ -90,9 +99,11 @@ export function App() {
             <div className="member-grid">
               {members.map((member) => (
                 <article className="member-card" key={member.university}>
-                  <div className="photo-placeholder" aria-hidden="true">
-                    写真
-                  </div>
+                  <img
+                    className="member-photo"
+                    src={memberPhotos[member.name]}
+                    alt={`${member.name}の写真`}
+                  />
                   <div>
                     <p className="member-school">{member.university}</p>
                     <h3>{member.name}</h3>
