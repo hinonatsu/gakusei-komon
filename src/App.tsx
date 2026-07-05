@@ -13,6 +13,15 @@ import {
   themes,
   values,
 } from "./content";
+import hinoPhoto from "./images/hino.jpg";
+import riaPhoto from "./images/ria.jpg";
+import shotaPhoto from "./images/shota.jpg";
+
+const memberPhotos: Record<string, string> = {
+  平賀梨愛: riaPhoto,
+  小野寺章太: shotaPhoto,
+  樋野夏希: hinoPhoto,
+};
 
 function SectionHeading({
   eyebrow,
@@ -90,61 +99,19 @@ export function App() {
             <div className="member-grid">
               {members.map((member) => (
                 <article className="member-card" key={member.university}>
-                  <div className="photo-placeholder" aria-hidden="true">
-                    写真
-                  </div>
+                  <img
+                    className="member-photo"
+                    src={memberPhotos[member.name]}
+                    alt={`${member.name}の写真`}
+                  />
                   <div>
                     <p className="member-school">{member.university}</p>
                     <h3>{member.name}</h3>
                   </div>
-                  <dl>
-                    {member.focus ? (
-                      <div>
-                        <dt>専攻・関心領域</dt>
-                        <dd>{member.focus}</dd>
-                      </div>
-                    ) : null}
-                    <div>
-                      <dt>一言プロフィール</dt>
-                      <dd>{member.profile}</dd>
-                    </div>
-                    {member.career.length > 0 ? (
-                      <div>
-                        <dt>経歴</dt>
-                        <dd>
-                          <ul className="member-detail-list">
-                            {member.career.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
-                        </dd>
-                      </div>
-                    ) : null}
-                    {member.strengths ? (
-                      <div>
-                        <dt>得意な視点</dt>
-                        <dd>{member.strengths}</dd>
-                      </div>
-                    ) : null}
-                    {member.achievements.length > 0 ? (
-                      <div>
-                        <dt>実績</dt>
-                        <dd>
-                          <ul className="member-detail-list">
-                            {member.achievements.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
-                        </dd>
-                      </div>
-                    ) : null}
-                    {member.companyView ? (
-                      <div>
-                        <dt>企業に対して提供できる視点</dt>
-                        <dd>{member.companyView}</dd>
-                      </div>
-                    ) : null}
-                  </dl>
+                  <div className="member-profile">
+                    <h4>プロフィール</h4>
+                    <p>{member.profile}</p>
+                  </div>
                 </article>
               ))}
             </div>

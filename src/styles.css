@@ -418,16 +418,17 @@ tr:last-child td {
   background: var(--white);
 }
 
-.photo-placeholder {
-  display: grid;
+.member-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
   min-height: 210px;
-  place-items: center;
   margin-bottom: 24px;
   border: 1px solid var(--line);
-  background:
-    linear-gradient(135deg, rgba(17, 17, 17, 0.04), transparent 38%),
-    var(--soft);
-  color: var(--muted);
+  background: var(--soft);
+  filter: grayscale(1);
+  object-fit: cover;
+  object-position: center 28%;
 }
 
 .member-school {
@@ -436,38 +437,23 @@ tr:last-child td {
   line-height: 1.6;
 }
 
-.member-card dl {
+.member-profile {
   margin: 22px 0 0;
-}
-
-.member-card dl div {
   padding: 18px 0;
   border-top: 1px solid var(--line);
 }
 
-.member-card dt {
+.member-profile h4 {
+  margin: 0;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.6;
 }
 
-.member-card dd {
-  margin-left: 0;
-}
-
-.member-detail-list {
-  display: grid;
-  gap: 10px;
-}
-
-.member-detail-list li {
-  position: relative;
-  padding-left: 1em;
-}
-
-.member-detail-list li::before {
-  position: absolute;
-  left: 0;
-  content: "・";
+.member-profile p {
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.9;
 }
 
 .pricing-grid {
